@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Case Studies</title>
+<style>
+ 
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+    body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff; /* Set background to white */
+    color: #333; /* Dark text for readability */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  header {
+    background: linear-gradient(90deg, #c0392b 0%, #e74c3c 100%); /* Gradient with shades of red */
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(192,57,43,0.5);
+  }
+  main {
+    padding: 1rem;
+    max-width: 800px; /* Increased max-width to accommodate three columns */
+    margin: 0 auto;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 15px;
+  }
+  @media (max-width: 600px) {
+    .menu-grid {
+      grid-template-columns: 1fr; /* One column for smaller screens */
+    }
+  }
+  .menu-item {
+    background: #f2f2f2; /* Light background for menu items */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(192,57,43,0.6);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .menu-item:hover, .menu-item:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(192,57,43,0.9);
+    outline: none;
+  }
+  .menu-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  .menu-text {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, #c0392b, #e74c3c); /* Gradient for menu text */
+  }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem;
+    color: #666;
+  }
+
+</style>
+</head>
+<body>
+<header>Case Studies</header>
+<main>
+  <div class="menu-grid" role="menu" aria-label="Case study categories">
+    <a href="murder.html" div class="menu-item" tabindex="0" role="menuitem" aria-label="Murder">
+      <img src="images/murder.jpg" alt="Murder case" />
+      <div class="menu-text">Murder</div>
+    </a>
+    <div class="menu-item" tabindex="0" role="menuitem" aria-label="Robbery">
+      <img src="images/robbery.jpg" alt="Robbery case" />
+      <div class="menu-text">Robbery</div>
+    </div>
+    <div class="menu-item" tabindex="0" role="menuitem" aria-label="Kidnapping">
+      <img src="images/kidnapping.jpg" alt="Kidnapping case" />
+      <div class="menu-text">Kidnapping</div>
+    </div>
+    <div class="menu-item" tabindex="0" role="menuitem" aria-label="Assault and Battery">
+      <img src="images/assault.jpg" alt="Assault and Battery case" />
+      <div class="menu-text">Assault and Battery</div>
+    </div>
+    <div class="menu-item" tabindex="0" role="menuitem" aria-label="Rape">
+      <img src="images/rape.jpg" alt="Rape case" />
+      <div class="menu-text">Rape</div>
+    </div>
+    <div class="menu-item" tabindex="0" role="menuitem" aria-label="Domestic Violence">
+      <img src="images/domestic voilence.jpg" alt="Domestic Violence case" />
+      <div class="menu-text">Domestic Violence</div>
+    </div>
+    <div class="menu-item" tabindex="0" role="menuitem" aria-label="Drug Trafficking">
+      <img src="images/drug.jpg" alt="Drug Trafficking case" />
+      <div class="menu-text">Drug Trafficking</div>
+    </div>
+  </div>
+</main>
+<footer>© 2025 Case Studies</footer>
+<script>
+  // For keyboard accessibility: Allow enter or space key to simulate click on menu items
+  document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        alert(`You selected: ${item.querySelector('.menu-text').textContent}`);
+      }
+    });
+    item.addEventListener('click', () => {
+      alert(`You selected: ${item.querySelector('.menu-text').textContent}`);
+    });
+  });
+</script>
+</body>
+</html>
+

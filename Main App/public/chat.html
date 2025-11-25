@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talk-A-Tive</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <input type="text" class="search" placeholder="🔍 Search User" />
+
+    <h1 class="app-title">Talk to your experts</h1>
+
+    <div class="nav-icons">
+      <div class="bell" onclick="toggleDropdown()">
+        🔔<span class="badge">2</span>
+      </div>
+
+      <!-- Avatar -->
+      <img 
+        src="data:image/png;base64,iVBOR..."
+        class="avatar"
+        alt="avatar"
+      />
+
+      <!-- Dropdown -->
+      <div class="dropdown" id="dropdown">
+        <p>New Message from John Doe</p>
+        <p>New Message from Ankit</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h3>My Chats</h3>
+
+      <div class="chat-card"><strong>Testing</strong></div>
+      <div class="chat-card"><strong>Premchand</strong></div>
+      <div class="chat-card"><strong>Harsh</strong></div>
+    </div>
+
+    <!-- CHAT AREA -->
+    <div class="chat-area">
+      <h2>TESTING</h2>
+
+      <!-- MESSAGES -->
+      <div class="messages">
+
+        <!-- Left Message -->
+        <div class="message left">
+          <img class="msg-avatar" src="data:image/png;base64,iVBOR..." />
+          <span>Hey</span>
+        </div>
+
+        <div class="message left">
+          <img class="msg-avatar" src="data:image/png;base64,iVBOR..." />
+          <span>Hello</span>
+        </div>
+
+        <div class="message left">
+          <img class="msg-avatar" src="data:image/png;base64,iVBOR..." />
+          <span>Yo guys, all good?</span>
+        </div>
+
+        <!-- Right Message -->
+        <div class="message right">
+          How's it going?
+        </div>
+
+      </div>
+
+      <!-- INPUT -->
+      <div class="input-box">
+        <input type="text" placeholder="Enter a message.." />
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

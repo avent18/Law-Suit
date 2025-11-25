@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #df2626, #ea0d5a, #e15114, #f3f2f4, #e66a2b, #d55a07, #f0f2f2, #881801, #e15114, #ea0d5a, #df2626, #ff922b);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.chat-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: none;
+    outline: none;
+    flex: 0;
+}
+
+#send-button {
+    width: 60px;
+    padding: 10px;
+    margin-left: 530px;
+    border: none;
+    background-color: #d7150e;
+    color: #fff;
+    cursor: pointer;
+    flex: 0;
+    border-radius: 20%;
+}
+
+@media (max-width: 600px) {
+    .chat-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}

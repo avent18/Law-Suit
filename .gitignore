@@ -1,0 +1,78 @@
+# -------------------------
+# Python (Flask)
+# -------------------------
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Flask instance folder
+instance/
+
+# PyInstaller
+*.spec
+
+# Environment variables
+*.env
+.env.*
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# SQLite or temp DB files
+*.db
+*.sqlite3
+
+# VS Code settings
+.vscode/
+
+# -------------------------
+# Node.js (Express)
+# -------------------------
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+backend/.env
+frontend/.env
+*.env
+
+# Build output
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# -------------------------
+# System files
+# -------------------------
+
+.DS_Store
+Thumbs.db
+
+# Python cache in subfolders
+**/__pycache__/
+
+# -------------------------
+# Optional: Ignore IDE files
+# -------------------------
+
+.idea/
+*.iml
