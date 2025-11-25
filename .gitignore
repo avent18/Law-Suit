@@ -2,6 +2,9 @@
 # Python (Flask)
 # -------------------------
 
+backend/crime.pkl
+backend/ashishfp(1).ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
